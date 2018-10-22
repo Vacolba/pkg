@@ -9,7 +9,7 @@ import (
 	"github.com/FZambia/sentinel"
 	"github.com/gomodule/redigo/redis"
 
-	"gitlab.i/pkg/web/model"
+	"github.com/vacolba/pkg/model"
 )
 
 func dialWithDB(network, address, password, DB string) (redis.Conn, error) {

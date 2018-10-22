@@ -33,6 +33,18 @@ type DBStorage struct {
 	Key      string `json:"key"`
 }
 
+// RedisStorage settings to connect to Redis
+type RedisStorage struct {
+	Type     string `json:"type"`
+	Master   string `json:"master"`
+	Host     string `json:"host"`
+	Port     int    `json:"port"`
+	Size     int    `json:"size"`
+	Database string `json:"database"`
+	HashKey  string `json:"key"`
+	BlockKey string `json:"blockkey"`
+}
+
 // Web is the config format for the HTTP server.
 type Web struct {
 	HTTP           string   `json:"http"`

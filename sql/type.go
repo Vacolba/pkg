@@ -13,6 +13,13 @@ type NullString struct {
 	sql.NullString
 }
 
+// NewNullString init a new NullString
+func NewNullString(data string) NullString {
+	ns := new(NullString)
+	ns.Scan(data)
+	return *ns
+}
+
 // UnmarshalJSON returns NullString object from a JSON
 func (ns *NullString) UnmarshalJSON(b []byte) error {
 	if bytes.Equal(b, []byte("null")) {
@@ -41,7 +48,7 @@ type NullInt64 struct {
 	sql.NullInt64
 }
 
-// UnmarshalJSON returns NullString object from a JSON
+// UnmarshalJSON returns NullInt64 object from a JSON
 func (ni *NullInt64) UnmarshalJSON(b []byte) error {
 	if bytes.Equal(b, []byte("null")) {
 		ni.Int64 = 0

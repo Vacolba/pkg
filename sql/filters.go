@@ -5,16 +5,14 @@ import (
 	"strings"
 )
 
-const (
-	QueryTypes := map[string]bool {
-		"=",
-		"!=",
-		"in",
-		"not in",
-		"like",
-		"no like",
-	}
-)
+var QueryTypes = map[string]bool{
+	"=":       true,
+	"!=":      true,
+	"in":      true,
+	"not in":  true,
+	"like":    true,
+	"no like": true,
+}
 
 // Condition is each one of the conditions of the consultation
 type Condition struct {

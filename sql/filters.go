@@ -6,7 +6,7 @@ import (
 )
 
 const (
-	QueryTypes = map[string]bool{
+	QueryTypes map[string]bool = {
 		"=",
 		"!=",
 		"in",
